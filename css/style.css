@@ -9,6 +9,9 @@
     --color-bg: #f3f4f9;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 
 * {
@@ -288,6 +291,15 @@ header .mobile {
     .brands ul li {
         display: flex;
         justify-content: center;
+
+    }
+
+    .brands ul img {
+        width: 31%;
+    }
+
+    .brands ul {
+        padding: 50px 0;
     }
 }
 
@@ -380,6 +392,15 @@ header .mobile {
 
 .about .container .box2 .question.active span {
     display: block;
+}
+
+
+
+@media (max-width: 575.98px) {
+    .about .container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+
+    }
 }
 
 /* End section about */
