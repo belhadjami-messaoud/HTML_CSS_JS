@@ -8,6 +8,17 @@ let slideNavigate = document.querySelectorAll(".clients .navigation span");
 let questions = document.querySelectorAll(".question")
 let answer = document.querySelectorAll(".answer")
 
+//header variable
+
+let header = document.querySelector("header .nav")
+let mobile = document.querySelector("header .mobile")
+
+
+// section about header
+mobile.addEventListener("click", function () {
+    header.classList.toggle("active")
+})
+
 //section about slider
 let counter = 1;
 let size = boxs.clientWidth;

@@ -49,7 +49,14 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
+
+
+
+
+
+
 
 header .logo img {
     width: 130px;
@@ -100,6 +107,10 @@ header .mobile {
     display: none;
 }
 
+header .nav.active {
+    display: block;
+}
+
 @media (max-width: 575.98px) {}
 
 @media (max-width: 767.98px) {}
@@ -107,6 +118,8 @@ header .mobile {
 @media (max-width: 991.98px) {
     header .nav {
         display: none;
+        width: 100%;
+        z-index: 2;
     }
 
     header .mobile {
@@ -114,7 +127,31 @@ header .mobile {
         font-size: 20px;
         color: var(--color-black);
     }
+
+    header .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    header .nav .parent {
+        display: block;
+        width: 100%;
+        background-color: white;
+        padding: 15px 0;
+
+    }
+
+    header .nav .parent li:hover a {
+        padding-left: 15px;
+    }
+
+    header .nav .parent li:hover a::before {
+        width: 0;
+    }
 }
+
 
 @media (max-width: 1199.98px) {}
 
@@ -537,10 +574,11 @@ header .mobile {
 }
 
 .clients .container .client {
-    width: 600px;
     margin: 0 auto;
     overflow: hidden;
 }
+
+
 
 .clients .container .client .slider {
     display: flex;
@@ -575,6 +613,12 @@ header .mobile {
 
 .clients .container .navigation span.active {
     background-color: var(--color-blue);
+}
+
+@media (min-width: 576px) {
+    .clients .container .client {
+        width: 600px;
+    }
 }
 
 /* End section Happy clients */
@@ -731,6 +775,17 @@ header .mobile {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    row-gap: 20px;
+}
+
+@media (max-width: 575.98px) {
+    .contact form .input-group {
+        flex-direction: column;
+    }
+
+    .contact form .input-group input {
+        width: 100% !important;
+    }
 }
 
 .contact form .input-group input {
