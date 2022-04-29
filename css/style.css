@@ -37,11 +37,20 @@ html {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    padding: 30px 0;
+    transition: 0.3s;
+}
+
+
+header.active {
+    background-color: #fff;
     padding: 15px 0;
+    box-shadow: 0 1px 10px #ccc;
+    z-index: 22222;
 }
 
 /* Start section header */
@@ -53,20 +62,11 @@ header .container {
 }
 
 
-
-
-
-
-
 header .logo img {
     width: 130px;
 }
 
 
-
-header .nav .parent {
-    display: flex;
-}
 
 header .nav .parent li {
     display: block;
@@ -107,8 +107,14 @@ header .mobile {
     display: none;
 }
 
-header .nav.active {
-    display: block;
+header .nav .parent {
+    height: 0;
+    transition: 0.3s;
+}
+
+header .nav.active .parent {
+    height: 330px;
+    padding: 15px 0;
 }
 
 @media (max-width: 575.98px) {}
@@ -117,7 +123,7 @@ header .nav.active {
 
 @media (max-width: 991.98px) {
     header .nav {
-        display: none;
+
         width: 100%;
         z-index: 2;
     }
@@ -136,11 +142,9 @@ header .nav.active {
     }
 
     header .nav .parent {
-        display: block;
         width: 100%;
         background-color: white;
-        padding: 15px 0;
-
+        overflow: hidden;
     }
 
     header .nav .parent li:hover a {
@@ -153,7 +157,12 @@ header .nav.active {
 }
 
 
-@media (max-width: 1199.98px) {}
+@media (min-width: 992px) {
+    header .nav .parent {
+        display: flex !important;
+        align-items: center;
+    }
+}
 
 /* End section header */
 
@@ -199,10 +208,10 @@ header .nav.active {
 .contact .container button {
     width: fit-content;
     border: none;
-    padding: 16px 35px;
+    padding: 20px 35px;
     background-color: var(--color-blue);
     color: white;
-    border-radius: 24px;
+    border-radius: 30px;
     font-size: 16px;
     position: relative;
     overflow: hidden;

@@ -12,11 +12,19 @@ let answer = document.querySelectorAll(".answer")
 
 let header = document.querySelector("header .nav")
 let mobile = document.querySelector("header .mobile")
+let sticky = document.querySelector("header")
 
 
 // section about header
 mobile.addEventListener("click", function () {
     header.classList.toggle("active")
+})
+
+window.addEventListener("scroll", function () {
+    // if (window.scrollY > 0) {
+    //     sticky.classList.add("active")
+    // }
+    sticky.classList.toggle("active", this.scrollY > 0)
 })
 
 //section about slider
