@@ -49,7 +49,7 @@ header {
 header.active {
     background-color: #fff;
     padding: 15px 0;
-    box-shadow: 0 1px 10px #ccc;
+    box-shadow: 0 1px 10px #cccccc6b;
     z-index: 22222;
 }
 
