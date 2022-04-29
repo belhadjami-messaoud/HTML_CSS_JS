@@ -122,6 +122,12 @@ header .nav.active .parent {
 @media (max-width: 767.98px) {}
 
 @media (max-width: 991.98px) {
+
+    header {
+        background-color: white;
+        padding: 15px 0;
+    }
+
     header .nav {
 
         width: 100%;
