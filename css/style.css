@@ -97,6 +97,24 @@ header .mobile {
     display: none;
 }
 
+@media (max-width: 575.98px) {}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 991.98px) {
+    header .nav {
+        display: none;
+    }
+
+    header .mobile {
+        display: block;
+        font-size: 20px;
+        color: var(--color-black);
+    }
+}
+
+@media (max-width: 1199.98px) {}
+
 /* End section header */
 
 
@@ -105,8 +123,7 @@ header .mobile {
 .home {
     background: url(../img/hero-bg.jpg);
     background-size: cover;
-    /* height: 100vh; */
-    height: 650px;
+
 }
 
 .home .container {
@@ -192,32 +209,86 @@ header .mobile {
     width: 100%;
 }
 
+@media (max-width: 575.98px) {
+    .home .container .info h2 {
+        font-size: 19px;
+    }
+
+    .home .container .info h1 {
+        font-size: 23px;
+    }
+
+
+    .home .container .info button,
+    .about .container .box2 button,
+    .services .container button,
+    .contact .container button {
+        padding: 15px 20px;
+
+    }
+
+    .home .container .info p {
+        line-height: 22px;
+    }
+}
+
+
+
+@media (max-width: 767.98px) {
+    .home .container {
+        padding-top: 150px;
+        flex-wrap: wrap;
+    }
+
+    .home .container .info,
+    .home .container .image {
+        flex-basis: 100% !important;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .home {
+        height: 650px;
+    }
+
+    .home .container .info p {
+        line-height: 22px;
+    }
+}
+
 /* End section home */
 
 
 
 /* Start section brands */
 .brands ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    column-gap: 50px;
+    row-gap: 20px;
     padding: 100px 0;
 }
 
-.brands ul li {
-    flex-basis: 23%;
-}
+
 
 .brands ul img {
-    width: 60%;
+    width: 50%;
     opacity: 0.6;
     transition: 0.3s;
 }
 
 .brands ul img:hover {
     opacity: 1;
+}
+
+
+@media (max-width: 575.98px) {
+    .brands ul li {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* End section brands */
@@ -232,6 +303,7 @@ header .mobile {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     justify-content: space-between;
     padding-bottom: 100px;
+    row-gap: 60px;
 }
 
 .about .container .box {
@@ -298,6 +370,8 @@ header .mobile {
 .about .container .box2 .question.active .answer {
     height: 80px;
 }
+
+
 
 .about .container .box2 .question.active i {
     display: none;
