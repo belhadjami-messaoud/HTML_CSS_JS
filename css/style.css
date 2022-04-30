@@ -137,6 +137,11 @@ header .nav .parent {
         padding: 15px 0;
     }
 
+    header .nav.hide .parent {
+        height: 0;
+        padding: 15px 0;
+    }
+
     header .mobile {
         display: block;
         font-size: 20px;

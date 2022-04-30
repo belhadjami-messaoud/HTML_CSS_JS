@@ -1,4 +1,3 @@
-
 //sliders variable
 let slide = document.querySelector(".clients .slider");
 let boxs = document.querySelector(".clients .slider .box");
@@ -13,6 +12,8 @@ let answer = document.querySelectorAll(".answer")
 let header = document.querySelector("header .nav")
 let mobile = document.querySelector("header .mobile")
 let sticky = document.querySelector("header")
+let hide = document.querySelector("header .mobile i")
+
 
 
 // section about header
@@ -20,12 +21,22 @@ mobile.addEventListener("click", function () {
     header.classList.toggle("active")
 })
 
+
+
+
 window.addEventListener("scroll", function () {
-    // if (window.scrollY > 0) {
-    //     sticky.classList.add("active")
-    // }
     sticky.classList.toggle("active", this.scrollY > 0)
 })
+
+// console.log(header.firstElementChild.children)
+document.addEventListener("click", function (e) {
+    console.log(header.firstElementChild.children)
+    if (e.target !== hide && e.target !== header.firstElementChild) {
+        header.classList.remove("active")
+    }
+})
+
+
 
 //section about slider
 let counter = 1;
