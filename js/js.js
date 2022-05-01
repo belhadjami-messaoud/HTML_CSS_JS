@@ -14,7 +14,11 @@ let mobile = document.querySelector("header .mobile")
 let sticky = document.querySelector("header")
 let hide = document.querySelector("header .mobile i")
 
+// portfolio + team + contact variable 
 
+let portfolio = document.querySelector(".portfolio")
+let team = document.querySelector(".team")
+let contact = document.querySelector(".contact")
 
 // section about header
 mobile.addEventListener("click", function () {
@@ -65,4 +69,34 @@ questions.forEach(item => {
         console.log(answer[0].clientHeight)
 
     })
+})
+
+
+//section about portfolio 
+
+window.addEventListener("scroll", function () {
+    console.log(portfolio.offsetTop, this.scrollY)
+    if (this.scrollY > portfolio.offsetTop - 500) {
+        portfolio.classList.add("active")
+        team.classList.add("active")
+
+    } else {
+        portfolio.classList.remove("active")
+        team.classList.remove("active")
+
+    }
+
+    if (this.scrollY > team.offsetTop - 500) {
+        team.classList.add("active")
+
+    } else {
+        team.classList.remove("active")
+    }
+
+    if (this.scrollY > contact.offsetTop - 500) {
+        contact.classList.add("active")
+
+    } else {
+        contact.classList.remove("active")
+    }
 })

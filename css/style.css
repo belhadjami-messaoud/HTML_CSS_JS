@@ -658,6 +658,8 @@ header .nav .parent {
     background-color: #f3f4f9;
 }
 
+
+
 .portfolio .title,
 .team .title,
 .contact .title {
@@ -671,6 +673,39 @@ header .nav .parent {
     line-height: 22px;
     color: var(--color-gray);
     padding: 25px 0;
+    /* visibility: hidden; */
+    opacity: 0;
+}
+
+.portfolio .title h1,
+.team .title h1,
+.contact .title h1 {
+    /* visibility: hidden; */
+    opacity: 0;
+}
+
+.portfolio.active .title p,
+.portfolio.active .title h1,
+.team.active .title p,
+.team.active .title h1,
+.contact.active .title p,
+.contact.active .title h1 {
+    /* visibility: visible; */
+    opacity: 1;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .portfolio .content .box {
