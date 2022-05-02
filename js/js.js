@@ -5,7 +5,7 @@ let slideNavigate = document.querySelectorAll(".clients .navigation span");
 
 //questions variable
 let questions = document.querySelectorAll(".question")
-let answer = document.querySelectorAll(".answer")
+
 
 //header variable
 
@@ -34,7 +34,6 @@ window.addEventListener("scroll", function () {
 
 // console.log(header.firstElementChild.children)
 document.addEventListener("click", function (e) {
-    console.log(header.firstElementChild.children)
     if (e.target !== hide && e.target !== header.firstElementChild) {
         header.classList.remove("active")
     }
@@ -63,19 +62,19 @@ slideNavigate.forEach((item, key) => {
 // section about questions
 
 questions.forEach(item => {
+    // let answer = item.querySelector(".answer")
     item.addEventListener("click", function () {
         item.classList.toggle("active")
-        // answer[0].style.height = answer[0].clientHeight + "px"
-        console.log(answer[0].clientHeight)
-
+        // answer.style.height = answer.clientHeight + "px"
+        console.log(answer.clientHeight)
     })
+
 })
 
 
 //section about portfolio 
 
 window.addEventListener("scroll", function () {
-    console.log(portfolio.offsetTop, this.scrollY)
     if (this.scrollY > portfolio.offsetTop - 500) {
         portfolio.classList.add("active")
         team.classList.add("active")
