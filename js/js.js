@@ -74,28 +74,42 @@ questions.forEach(item => {
 
 //section about portfolio 
 
+// window.addEventListener("scroll", function () {
+//     if (this.scrollY > portfolio.offsetTop - 500) {
+//         portfolio.classList.add("active")
+//         team.classList.add("active")
+
+//     } else {
+//         portfolio.classList.remove("active")
+//         team.classList.remove("active")
+
+//     }
+
+//     if (this.scrollY > team.offsetTop - 500) {
+//         team.classList.add("active")
+
+//     } else {
+//         team.classList.remove("active")
+//     }
+
+//     if (this.scrollY > contact.offsetTop - 500) {
+//         contact.classList.add("active")
+
+//     } else {
+//         contact.classList.remove("active")
+//     }
+// })
+
 window.addEventListener("scroll", function () {
-    if (this.scrollY > portfolio.offsetTop - 500) {
-        portfolio.classList.add("active")
-        team.classList.add("active")
+    // if (this.scrollY > portfolio.offsetTop - 500) {
+    //     portfolio.classList.add("active")
+    //     team.classList.add("active")
+    // }
 
-    } else {
-        portfolio.classList.remove("active")
-        team.classList.remove("active")
-
-    }
-
-    if (this.scrollY > team.offsetTop - 500) {
-        team.classList.add("active")
-
-    } else {
-        team.classList.remove("active")
-    }
-
-    if (this.scrollY > contact.offsetTop - 500) {
-        contact.classList.add("active")
-
-    } else {
-        contact.classList.remove("active")
-    }
+    // if (500 >= portfolio.getBoundingClientRect().top) {
+    //     portfolio.classList.add("active")
+    //     team.classList.add("active")
+    // }
 })
+
+window.scroll()
