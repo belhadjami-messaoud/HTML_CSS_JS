@@ -20,9 +20,18 @@ let portfolio = document.querySelector(".portfolio")
 let team = document.querySelector(".team")
 let contact = document.querySelector(".contact")
 
+let par = document.querySelector("header .nav .parent")
+
 // section about header
 mobile.addEventListener("click", function () {
+    let height = par.getBoundingClientRect().height
+    header.style.height = height + "px"
     header.classList.toggle("active")
+
+    if (!header.classList.contains("active")) {
+        header.style.height = 0
+    }
+
 })
 
 
@@ -74,31 +83,31 @@ questions.forEach(item => {
 
 //section about portfolio 
 
-// window.addEventListener("scroll", function () {
-//     if (this.scrollY > portfolio.offsetTop - 500) {
-//         portfolio.classList.add("active")
-//         team.classList.add("active")
+window.addEventListener("scroll", function () {
+    if (this.scrollY > portfolio.offsetTop - 500) {
+        portfolio.classList.add("active")
+        team.classList.add("active")
 
-//     } else {
-//         portfolio.classList.remove("active")
-//         team.classList.remove("active")
+    } else {
+        portfolio.classList.remove("active")
+        team.classList.remove("active")
 
-//     }
+    }
 
-//     if (this.scrollY > team.offsetTop - 500) {
-//         team.classList.add("active")
+    if (this.scrollY > team.offsetTop - 500) {
+        team.classList.add("active")
 
-//     } else {
-//         team.classList.remove("active")
-//     }
+    } else {
+        team.classList.remove("active")
+    }
 
-//     if (this.scrollY > contact.offsetTop - 500) {
-//         contact.classList.add("active")
+    if (this.scrollY > contact.offsetTop - 500) {
+        contact.classList.add("active")
 
-//     } else {
-//         contact.classList.remove("active")
-//     }
-// })
+    } else {
+        contact.classList.remove("active")
+    }
+})
 
 window.addEventListener("scroll", function () {
     // if (this.scrollY > portfolio.offsetTop - 500) {
@@ -112,4 +121,7 @@ window.addEventListener("scroll", function () {
     // }
 })
 
-window.scroll()
+
+
+
+
