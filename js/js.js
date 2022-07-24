@@ -42,9 +42,19 @@ window.addEventListener("scroll", function () {
 })
 
 // console.log(header.firstElementChild.children)
+// document.addEventListener("click", function (e) {
+//     if (e.target !== hide && e.target !== header.firstElementChild) {
+//         header.classList.remove("active")
+//     }
+// })
+
+
+
 document.addEventListener("click", function (e) {
-    if (e.target !== hide && e.target !== header.firstElementChild) {
+    console.log(e.target.className);
+    if (e.target.className !== "fa-solid fa-bars") {
         header.classList.remove("active")
+        header.style.height = 0
     }
 })
 
