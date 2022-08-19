@@ -52,7 +52,7 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("click", function (e) {
     console.log(e.target.className);
-    if (e.target.className !== "fa-solid fa-bars") {
+    if (e.target != hide) {
         header.classList.remove("active")
         header.style.height = 0
     }
